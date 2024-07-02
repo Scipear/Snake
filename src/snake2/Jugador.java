@@ -8,6 +8,7 @@ public class Jugador{
     private Personaje personaje;
     private int puntaje;
     private String usuario;
+    //Este es un modificador
 
     public Jugador(String usuario, int x, int y, String direccion, int skin){
         this.usuario = usuario;
