@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
 import snake2.Front.PantallaJuego;
+import snake2.Front.PantallaLogin;
 import snake2.Front.PantallaPrincipal;
 
 public class Snake2 implements Runnable, ActionListener{
@@ -23,8 +24,9 @@ public class Snake2 implements Runnable, ActionListener{
     }
    
     public static void main(String[] args) {
-        Snake2 game = new Snake2();
-        game.iniciarJuego();
+        //Snake2 game = new Snake2();
+        //game.iniciarJuego();
+        new PantallaLogin();
     }
     
     public synchronized void iniciarJuego(){
