@@ -19,6 +19,7 @@ public class Pantalla extends JFrame {
      * 
      */
     public Pantalla(){
+        setTitle("Snake");
         setSize(ancho, alto);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);

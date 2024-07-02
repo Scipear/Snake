@@ -2,7 +2,6 @@ package snake2.Front;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -34,8 +33,7 @@ public class PantallaPrincipal extends Pantalla{
         creditsButton = new JButton();
         pointsButton = new JButton();
         respuesta = false;
-        iniciarPaneles();
-        add(multiPanel);
+        iniciarPaneles();        
         setVisible(true);
     }
 
@@ -46,6 +44,7 @@ public class PantallaPrincipal extends Pantalla{
 
         multiPanel.setBounds(0, 0, ancho, alto);
         multiPanel.add(fondo, Integer.valueOf(0));
+        add(multiPanel);
         iniciarBotones();        
     }
 
@@ -56,7 +55,6 @@ public class PantallaPrincipal extends Pantalla{
         playButton.setForeground(new Color(16, 16, 32));
         playButton.setBorder(null);
         playButton.setBounds(250, 420, 220, 50);
-        playButton.setMargin(new Insets(0, 0, 0, 0));
         playButton.addActionListener(iniciarJuego);
 
         howtoButton.setBackground(new Color(145, 146, 228));
@@ -79,6 +77,7 @@ public class PantallaPrincipal extends Pantalla{
         creditsButton.setText("Creditos");
         creditsButton.setBorder(null);
         creditsButton.setBounds(245, 550, 120, 50);
+        creditsButton.addActionListener(irCreditos);
 
         pointsButton.setBackground(new Color(145, 146, 228));
         pointsButton.setFont(new Font("Rockwell Extra Bold", 1, 18)); // NOI18N
@@ -102,10 +101,18 @@ public class PantallaPrincipal extends Pantalla{
         return respuesta;
     }
 
+    ActionListener irCreditos = new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+            setVisible(false);
+            new PantallaCreditos();
+        }
+    };
+
     ActionListener iniciarJuego = new ActionListener() {
         public void actionPerformed(ActionEvent e){
-            respuesta = true;
+            //respuesta = true;
             setVisible(false);
+            new PantallaLobby();
         }
     };
 }
