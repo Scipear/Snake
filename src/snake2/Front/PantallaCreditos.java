@@ -25,7 +25,7 @@ public class PantallaCreditos extends Pantalla{
     }
 
     public void iniciarPaneles(){
-        fondoImagen.setBounds(0, 0, ancho, alto);
+        fondoImagen.setBounds(0, -20, ancho, alto);
         fondo.setBounds(0, 0, ancho, alto);
         fondo.add(fondoImagen);
         fondo.setLayout(null);
